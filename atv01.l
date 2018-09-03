@@ -16,17 +16,16 @@ int STRING_LENGTH = 50000;
 char swap[4000];
 char strs[50000][50000];
 
-int variableNumberOfElements = 10;
+int variableNumberOfElements   = 10;
 int indexPalavreaDiferente     = 0;
-char **arrayPalavras   = NULL;
+char **arrayPalavras           = NULL;
 char **arrayPalavrasDiferentes = NULL;
 
 int palavrasDiferentes = 0;
 
 int frasesCnt          = 0;
-
-int palavraCnt          = 0;
-int cntPa                = 0;
+int palavraCnt         = 0;
+int cntPa              = 0;
 
 
 void palavrasDiferenteFree(){
@@ -41,7 +40,7 @@ void palavraDiferenteArrayFree(){
 void addPalavraDiferente(char * palavra){
     indexPalavreaDiferente++;
     if(arrayPalavrasDiferentes==NULL)
-    arrayPalavrasDiferentes = (char**) malloc(sizeof(char*) * 10);
+        arrayPalavrasDiferentes = (char**) malloc(sizeof(char*) * 200);
     
     arrayPalavrasDiferentes[indexPalavreaDiferente-1] = (char*) malloc(sizeof(char)  * 20);
     strcpy(arrayPalavrasDiferentes[indexPalavreaDiferente-1], palavra);
@@ -83,7 +82,7 @@ void contPalavrasDiferentes(){
 void addPalavra(char * palavra){
     cntPa++;
     if(arrayPalavras==NULL)
-        arrayPalavras = (char**) malloc(sizeof(char*) * 4);
+        arrayPalavras = (char**) malloc(sizeof(char*) * 200);
     
     arrayPalavras[palavraCnt-1] = (char*) malloc(sizeof(char)  * 20);
     strcpy(arrayPalavras[palavraCnt-1], palavra);
