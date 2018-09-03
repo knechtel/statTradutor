@@ -1,0 +1,2 @@
+# statTradutor
+# statTradutor
