@@ -116,7 +116,7 @@ palavra [a-z]+
 
 "\."                       { frasesCnt++;                   }
 {palavra}                  { palavraCnt++; addPalavra(yytext);   }
-{nomeInicioFrase}          { palavraCnt++;   }
+{nomeInicioFrase}          { palavraCnt++;  addPalavra(yytext); }
 
 
 
